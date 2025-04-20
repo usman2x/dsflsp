@@ -5,3 +5,9 @@
  */
 
 // You can delete this file if you're not using it
+
+import "./src/styles/global.css";
+
+export const onInitialClientRender = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
