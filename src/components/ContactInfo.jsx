@@ -3,6 +3,7 @@ import ContactItem from "./ContactItem";
 import { FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 
+
 const ContactInfo = () => {
   return (
     <div className="bg-white p-8 rounded-xl shadow-md">

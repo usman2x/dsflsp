@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "gatsby";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,36 +11,55 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 bg-white shadow-md" dir="rtl">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="text-xl font-bold text-blue-600">
-          أخصائي صيانة المدينة
-        </div>
+        {/* Site Title on Right */}
 
+        <div className="text-xl font-arabic text-blue-600">تسليح المدينة</div>
+
+        {/* Hamburger - Only visible when menu is closed on mobile */}
         <div className="md:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-600 focus:outline-none"
-          >
-            ☰
-          </button>
+          {!isOpen && (
+            <button
+              onClick={() => setIsOpen(true)}
+              className="text-gray-600 text-2xl focus:outline-none"
+              aria-label="Open Menu"
+            >
+              ☰
+            </button>
+          )}
         </div>
 
+        {/* Navigation Menu */}
         <nav
-          className={`md:flex md:items-center space-x-6 md:space-x-reverse rtl ${
+          className={`${
             isOpen ? "block" : "hidden"
-          } md:block`}
+          } md:flex md:items-center gap-4`}
         >
           {sections.map((section) => (
             <a
               key={section.id}
               href={`#${section.id}`}
               className="block md:inline-block py-2 px-4 text-gray-700 hover:text-blue-600 font-medium"
+              onClick={() => setIsOpen(false)} // Auto-close on mobile click
             >
               {section.label}
             </a>
           ))}
         </nav>
+
+        {/* Close button inside menu (mobile only) */}
+        {isOpen && (
+          <div className="md:hidden absolute top-4 left-4">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="text-gray-600 text-2xl focus:outline-none"
+              aria-label="Close Menu"
+            >
+              ✕
+            </button>
+          </div>
+        )}
       </div>
     </header>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import CallToAction from "./CallToAction";
+import FloatingButtons from "./FloatingButtons";
 
 const Layout = ({ children }) => {
   return (
@@ -9,9 +9,9 @@ const Layout = ({ children }) => {
       <Header />
       <main>{children}</main>
       <Footer />
-      <CallToAction />
+      <FloatingButtons />
     </div>
-  );
+);
 };
 
 export default Layout;

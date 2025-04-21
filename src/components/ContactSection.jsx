@@ -12,10 +12,9 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <ContactInfo />
-
           <div className="bg-white p-1 rounded-xl shadow-md overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.843382117518!2d46.67241431500189!3d24.81798498407167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee3a9ae93a109%3A0x9a5a3eef3a5e3b1b!2sRiyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d291118.43897777324!2d39.617557500000004!3d24.471072399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbe5197d220d5%3A0x2e54514fea3b08d9!2sMadinah%20Saudi%20Arabia!5e1!3m2!1sen!2s!4v1745229502459!5m2!1sen!2s"
               width="100%"
               height="100%"
               style={{ minHeight: "400px", border: 0 }}

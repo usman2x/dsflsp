@@ -1,27 +1,6 @@
 import React from "react";
 import ServiceCard from "./ServiceCard";
-
-const services = [
-  {
-    title: "صيانة الغسالات الأوتوماتيكية",
-    description:
-      "نقدم خدمة صيانة متكاملة للغسالات الأوتوماتيكية بجميع أنواعها...",
-    image:
-      "https://images.unsplash.com/photo-1556905055-8f358a7a10b1?auto=format&fit=crop&w=1470&q=80",
-    whatsapp: "966500000000",
-    phone: "+966500000000",
-  },
-  {
-    title: "صيانة الثلاجات والمجمدات",
-    description:
-      "إصلاح أعطال الثلاجات والمجمدات بجميع أنواعها، مع ضمان على التبريد...",
-    image:
-      "https://images.unsplash.com/photo-1563297007-0686b7003af7?auto=format&fit=crop&w=1470&q=80",
-    whatsapp: "966500000000",
-    phone: "+966500000000",
-  },
-  // Add the rest of your 4 services here...
-];
+import services from "../data/services.json"; // Adjust path as needed
 
 const ServiceList = () => {
   return (
