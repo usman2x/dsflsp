@@ -1,6 +1,15 @@
 import React from "react";
 import ServiceCard from "./ServiceCard";
-import services from "../data/services.json"; // Adjust path as needed
+import services from "../data/services.json";
+import contacts from "../data/contact.json";
+
+// Map contacts to services
+const servicesWithContacts = services.map((service, index) => ({
+  ...service,
+  phone: contacts.phone,
+  whatsapp: contacts.whatsapp,
+}));
+
 
 const ServiceList = () => {
   return (
@@ -14,7 +23,7 @@ const ServiceList = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {servicesWithContacts.map((service, index) => (
             <ServiceCard key={index} {...service} />
           ))}
         </div>

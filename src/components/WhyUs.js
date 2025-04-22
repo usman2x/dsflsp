@@ -1,32 +1,14 @@
 import React from "react";
 import { FaBolt, FaShieldAlt, FaHeadset, FaHistory } from "react-icons/fa";
+import features from "../data/features.json";
 
-const features = [
-  {
-    icon: <FaBolt className="text-primary text-2xl" />,
-    title: "خدمة سريعة",
-    description: "وصول سريع خلال ساعتين في معظم المناطق، مع حلول فورية لأعطال الأجهزة الكهربائية.",
-    bg: "bg-primary bg-opacity-10",
-  },
-  {
-    icon: <FaShieldAlt className="text-secondary text-2xl" />,
-    title: "أفضل ضمان",
-    description: "ضمان ممتاز على قطع الغيار والعمل يصل إلى سنة كاملة حسب نوع الصيانة.",
-    bg: "bg-secondary bg-opacity-10",
-  },
-  {
-    icon: <FaHeadset className="text-accent text-2xl" />,
-    title: "متاح على الهاتف",
-    description: "خدمة عملاء متاحة 24/7 للرد على استفساراتكم وتحديد مواعيد الصيانة.",
-    bg: "bg-accent bg-opacity-10",
-  },
-  {
-    icon: <FaHistory className="text-primary text-2xl" />,
-    title: "خبرة طويلة",
-    description: "أكثر من 15 عاماً من الخبرة في صيانة الأجهزة الكهربائية بجميع أنواعها.",
-    bg: "bg-primary bg-opacity-10",
-  },
-];
+const iconMap = {
+  "FaBolt": FaBolt,
+  "FaShieldAlt": FaShieldAlt,
+  "FaHeadset": FaHeadset,
+  "FaHistory": FaHistory,
+};
+
 
 const WhyUs = () => {
   return (
@@ -38,18 +20,22 @@ const WhyUs = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-md text-center"
-            >
-              <div className={`${feature.bg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
-                {feature.icon}
+          {features.map((feature, index) => {
+            const Icon = iconMap[feature.icon] || FaBolt; // default fallback icon
+
+            return (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md text-center"
+              >
+                <div className={`${feature.bg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <Icon className="text-primary text-2xl" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

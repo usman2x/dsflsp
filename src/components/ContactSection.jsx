@@ -1,5 +1,6 @@
 import React from "react";
 import ContactInfo from "./ContactInfo";
+import contacts from "../data/contact.json";
 
 const ContactSection = () => {
   return (
@@ -14,7 +15,7 @@ const ContactSection = () => {
           <ContactInfo />
           <div className="bg-white p-1 rounded-xl shadow-md overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d291118.43897777324!2d39.617557500000004!3d24.471072399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbe5197d220d5%3A0x2e54514fea3b08d9!2sMadinah%20Saudi%20Arabia!5e1!3m2!1sen!2s!4v1745229502459!5m2!1sen!2s"
+              src={contacts.locationEmbed}
               width="100%"
               height="100%"
               style={{ minHeight: "400px", border: 0 }}

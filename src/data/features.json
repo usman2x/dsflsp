@@ -1,0 +1,26 @@
+[
+  {
+    "icon": "FaBolt",
+    "title": "خدمة سريعة",
+    "description": "وصول سريع خلال ساعتين في معظم المناطق، مع حلول فورية لأعطال الأجهزة الكهربائية.",
+    "bg": "bg-primary bg-opacity-10"
+  },
+  {
+    "icon": "FaShieldAlt",
+    "title": "أفضل ضمان",
+    "description": "ضمان ممتاز على قطع الغيار والعمل يصل إلى سنة كاملة حسب نوع الصيانة.",
+    "bg": "bg-secondary bg-opacity-10"
+  },
+  {
+    "icon": "FaHeadset",
+    "title": "متاح على الهاتف",
+    "description": "خدمة عملاء متاحة 24/7 للرد على استفساراتكم وتحديد مواعيد الصيانة.",
+    "bg": "bg-accent bg-opacity-10"
+  },
+  {
+    "icon": "FaHistory",
+    "title": "خبرة طويلة",
+    "description": "أكثر من 15 عاماً من الخبرة في صيانة الأجهزة الكهربائية بجميع أنواعها.",
+    "bg": "bg-primary bg-opacity-10"
+  }
+]

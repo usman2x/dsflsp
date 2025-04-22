@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import site from "../data/site.json";
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +17,7 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Site Title on Right */}
 
-        <div className="text-xl font-arabic text-blue-600">تسليح المدينة</div>
+        <div className="text-xl font-arabic text-blue-600">{site.businessName}</div>
 
         {/* Hamburger - Only visible when menu is closed on mobile */}
         <div className="md:hidden">

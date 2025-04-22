@@ -2,6 +2,8 @@ import React from "react";
 import ContactItem from "./ContactItem";
 import { FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
+import contacts from "../data/contact.json";
+import site from "../data/site.json";
 
 
 const ContactInfo = () => {
@@ -13,27 +15,18 @@ const ContactInfo = () => {
           icon={<FaPhone className="text-primary" />}
           bgColor="bg-primary bg-opacity-10"
           title="الهاتف"
-          link="tel:+966500000000"
+          link={`tel:+${contacts.phone}`}
         >
-          +966 50 000 0000
+         {contacts.phone}
         </ContactItem>
 
         <ContactItem
           icon={<FaWhatsapp className="text-green-600" />}
           bgColor="bg-green-600 bg-opacity-10"
           title="واتساب"
-          link="https://wa.me/966500000000"
+          link={`https://wa.me/${contacts.whatsapp}`}
         >
-          +966 50 000 0000
-        </ContactItem>
-
-        <ContactItem
-          icon={<FaEnvelope className="text-gray-800" />}
-          bgColor="bg-gray-800 bg-opacity-10"
-          title="البريد الإلكتروني"
-          link="mailto:info@electrician.com"
-        >
-          info@electrician.com
+          {contacts.whatsapp}
         </ContactItem>
 
         <ContactItem
@@ -42,8 +35,8 @@ const ContactInfo = () => {
           title="أوقات العمل"
         >
           <>
-            <p>من السبت إلى الخميس: 8 صباحاً - 10 مساءً</p>
-            <p>الجمعة: 4 مساءً - 10 مساءً</p>
+            <p>{site.workingHours.saturdayToThursday}</p>
+            <p>{site.workingHours.friday}</p>
           </>
         </ContactItem>
       </div>

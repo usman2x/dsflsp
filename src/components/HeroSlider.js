@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { FaWhatsapp, FaPhone, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import slides from "../data/slides.json"; // Adjust path as needed
+import slides from "../data/slides.json";
+import contacts from "../data/contact.json";
+
+// Map contacts to slides
+const slidesWithContacts = slides.map((slide) => ({
+  ...slide,
+  phone: contacts.phone,
+  whatsapp: contacts.whatsapp,
+}));  
+
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -19,7 +28,7 @@ const HeroSlider = () => {
   return (
     <section className="relative w-full overflow-hidden">
       <div className="relative h-[80vh]">
-        {slides.map((slide, index) => (
+        {slidesWithContacts.map((slide, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
@@ -37,13 +46,13 @@ const HeroSlider = () => {
                 <p className="text-lg md:text-xl mb-6">{slide.text}</p>
                 <div className="flex justify-center gap-4 flex-wrap">
                   <a
-                    href="https://wa.me/966500000000"
+                    href={`https://wa.me/${slide.whatsapp}`}
                     className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2"
                   >
                     <FaWhatsapp /> واتساب
                   </a>
                   <a
-                    href="tel:+966500000000"
+                    href={`tel:${slide.phone}`}
                     className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2"
                   >
                     <FaPhone /> اتصل الآن
