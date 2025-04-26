@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[125],{3331:function(e,t,a){a.r(t);var s=a(6540);t.default=()=>s.createElement("main",{className:"h-screen flex items-center justify-center bg-gray-100"},s.createElement("h1",{className:"text-4xl font-bold text-gray-800"},"404 - الصفحة غير موجودة"))}}]);
+//# sourceMappingURL=component---src-pages-404-js-13cb6c2bf689b2053cf3.js.map
