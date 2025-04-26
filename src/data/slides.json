@@ -2,16 +2,16 @@
     {
         "heading": "الصيانة غسالات اتوماتيك و الثلاجات المدينة المنورة",
         "text": "خدمة فورية لجميع أعطال التكييف مع ضمان ممتاز",
-        "image": "/images/washing_machine.png"
+        "image": "images/washing_machine.png"
     },
     {
         "heading": "صيانة الثلاجات والمجمدات",
         "text": "صيانة غسالات اتوماتيك ومجففات اتوماتيك مهندس صيانه غسالات",
-        "image": "/images/refrigerator.png"
+        "image": "images/refrigerator.png"
     },
     {
         "heading": "صيانة مجفف اريستون المدينة المنورة",
         "text": "خدمة فورية لجميع أعطال التكييف مع ضمان ممتاز",
-        "image": "/images/dryer.jpg"
+        "image": "images/dryer.jpg"
     }
 ]
