@@ -33,5 +33,14 @@ module.exports = {
         icon: `static/images/electrical-appliance.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["AW-17055042605"],
+        pluginConfig: {
+          head: true,
+        },
+      }
+    }
   ],
 }
