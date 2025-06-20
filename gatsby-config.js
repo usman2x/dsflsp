@@ -7,15 +7,16 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
-require("dotenv").config();
-
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 module.exports = {
   pathPrefix: "/dsflsp",
   siteMetadata: {
     title: "صيانة غسالات ومجففات في المدينة المنورة",
     descriptions: "صيانة غسالات اتوماتيك في المدينة المنورة تشمل إل جي، سامسونج، دايو. فحص شامل، خدمة سريعة، وضمان معتمد. اتصل الآن",
     author: "مهندس صيانة",
-    siteUrl: process.env.GATSBY_SITE_URL,
+    siteUrl: "http://localhost:8000"
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -46,7 +47,7 @@ module.exports = {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
         policy: [{ userAgent: '*', allow: '/' }],
-        sitemap: process.env.GATSBY_SITEMAP_URL,
+        sitemap: "http://localhost:8000/sitemap.xml"
       },
     },
   ],
