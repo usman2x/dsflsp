@@ -3,20 +3,22 @@ import ServiceCard from "./ServiceCard";
 import services from "../data/services.json";
 import contacts from "../data/contact.json";
 
-// Map contacts to services
-const servicesWithContacts = services.map((service, index) => ({
+// Attach contact info to each service
+const servicesWithContacts = services.map((service) => ({
   ...service,
   phone: contacts.phone,
   whatsapp: contacts.whatsapp,
 }));
 
-
 const ServiceList = () => {
   return (
-    <section id="services" className="py-16 bg-white">
+    <section id="services" className="py-16 bg-white" aria-labelledby="services-heading">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          <h2
+            id="services-heading"
+            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+          >
             خدماتنا المتخصصة
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
