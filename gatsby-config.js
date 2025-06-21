@@ -16,7 +16,7 @@ module.exports = {
     title: "صيانة غسالات ومجففات في المدينة المنورة",
     descriptions: "صيانة غسالات اتوماتيك في المدينة المنورة تشمل إل جي، سامسونج، دايو. فحص شامل، خدمة سريعة، وضمان معتمد. اتصل الآن",
     author: "مهندس صيانة",
-    siteUrl: "http://localhost:8000"
+    siteUrl: process.env.GATSBY_SITE_URL || "http://localhost:8000"
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -36,7 +36,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ["AW-17055042605"],
+        trackingIds: [process.env.GATSBY_GA_TRACKING_ID],
         pluginConfig: {
           head: true,
         },
@@ -47,7 +47,7 @@ module.exports = {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
         policy: [{ userAgent: '*', allow: '/' }],
-        sitemap: "http://localhost:8000/sitemap.xml"
+        sitemap: process.env.GATSBY_SITEMAP_URL || `${siteUrl}/sitemap.xml`
       },
     },
   ],

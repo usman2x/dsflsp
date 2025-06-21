@@ -1,10 +1,14 @@
 # Todos
 
-- [ ] Update hardcoded values from environment variables
-- [ ] Fix معلومات الاتصال , hovering phone and whatsapp should visible change
-- [ ] Add Companies section below خدماتنا المتخصصة
+- [x] Update hardcoded values from environment variables
+- [x] Fix معلومات الاتصال , hovering phone and whatsapp should visible change
+- [x] Add Companies section below خدماتنا المتخصصة
 - [ ] Fix Github action with environment variables
-- [ ] Fix Header UI , Bold مهندس صيانة غسالات , Home click fix
+- [x] Fix Header UI , Bold مهندس صيانة غسالات , Home click fix
 - [ ] Test functionality
 - [ ] Deploy application
 - [ ] Fix Ads
+
+
+Reference
+1. https://arrbah.com

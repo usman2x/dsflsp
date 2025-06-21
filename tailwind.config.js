@@ -12,6 +12,9 @@ module.exports = {
           notoKufi: ['"Noto Kufi Arabic"', 'sans-serif'],
           elMessiri: ['"El Messiri"', 'sans-serif'],
         },
+        minWidth: {
+          '32': '8rem',
+        }
       },
     },
     plugins: [],

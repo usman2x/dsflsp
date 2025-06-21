@@ -2,6 +2,7 @@ import React from "react";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
 import contacts from "../data/contact.json";
 import heroData from "../data/hero.json";
+import PhoneNumber from "./PhoneNumber";
 
 const Hero = () => {
     const { phone, whatsapp } = contacts;
@@ -9,6 +10,7 @@ const Hero = () => {
 
     return (
         <section
+            id="home"
             className="relative h-[80vh] flex items-center justify-center bg-cover bg-center"
             style={{ backgroundImage: `url('${image}')` }}
             aria-label={heading}
@@ -40,6 +42,7 @@ const Hero = () => {
                         <FaPhone /> اتصل الآن
                     </a>
                 </div>
+
             </div>
         </section>
     );

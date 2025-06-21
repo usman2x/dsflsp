@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import seoData from "../data/seo.json";
 
 
-const siteUrl = process.env.GATSBY_SITE_URL || "http://localhost:9000/test";
+const siteUrl = process.env.GATSBY_SITE_URL || "";
 
 const SEO = ({ title, description, keywords, image, url }) => {
   const {

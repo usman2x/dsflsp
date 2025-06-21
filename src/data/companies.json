@@ -1,0 +1,23 @@
+[
+    {
+      "name": "LG",
+      "name_ar": "إل جي",
+      "image": "images/companies/lg.png"
+    },
+    {
+      "name": "Samsung",
+      "name_ar": "سامسونج",
+     "image": "images/companies/samsung.png"
+    },
+    {
+      "name": "Daewoo",
+      "name_ar": "دايو",
+      "image": "images/companies/daewoo.png"
+    },
+    {
+      "name": "Ariston",
+      "name_ar": "أريستون",
+      "image": "images/companies/ariston.png"
+    }
+  ]
+  
