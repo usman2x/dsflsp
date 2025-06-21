@@ -1,6 +1,6 @@
 import React from "react";
 import ContactItem from "./ContactItem";
-import { FaPhone, FaEnvelope, FaClock } from "react-icons/fa";
+import { FaPhone, FaClock } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa6";
 import contacts from "../data/contact.json";
 import site from "../data/site.json";

@@ -7,13 +7,16 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 module.exports = {
   pathPrefix: "/dsflsp",
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: "صيانة غسالات ومجففات في المدينة المنورة",
+    descriptions: "صيانة غسالات اتوماتيك في المدينة المنورة تشمل إل جي، سامسونج، دايو. فحص شامل، خدمة سريعة، وضمان معتمد. اتصل الآن",
+    author: "مهندس صيانة",
+    siteUrl: process.env.GATSBY_SITE_URL || "http://localhost:8000"
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -26,9 +29,6 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `static/images/electrical-appliance.png`, // This path is relative to the root of the site.
       },
@@ -36,11 +36,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: ["AW-17055042605"],
+        trackingIds: [process.env.GATSBY_GA_TRACKING_ID],
         pluginConfig: {
           head: true,
         },
       }
-    }
+    },
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
+        sitemap: process.env.GATSBY_SITEMAP_URL || `${siteUrl}/sitemap.xml`
+      },
+    },
   ],
 }

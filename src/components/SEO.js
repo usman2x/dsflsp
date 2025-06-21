@@ -1,20 +1,41 @@
 import React from "react";
-
 import { Helmet } from "react-helmet";
+import seoData from "../data/seo.json";
 
-const SEO = () => {
+
+const siteUrl = process.env.GATSBY_SITE_URL || "";
+
+const SEO = ({ title, description, keywords, image, url }) => {
+  const {
+    title: defaultTitle,
+    descriptions: defaultDescription,
+    keywords: defaultKeywords
+  } = seoData;
+
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    keywords: keywords || defaultKeywords,
+    image: image || `${siteUrl}/images/washing-dryer.jpg`,
+    url: url || siteUrl,
+  };
+
   return (
     <Helmet>
       <html lang="ar" dir="rtl" />
-      <title>مهندس صيانة غسالات ومجففات وأجهزة كهربائية في المدينة المنورة | تصليح المدينة</title>
-      <meta name="description" content="نقدم خدمات صيانة متكاملة للغسالات، المجففات، الثلاجات، المكيفات، والمجمدات في المدينة المنورة بواسطة مهندسين محترفين وفنيين خبراء." />
-      <meta name="keywords" content="مهندس صيانة غسالات, مهندس مجففات, مهندس ثلاجات, مهندس مكيفات, مهندس صيانة أجهزة كهربائية, فني غسالات ومجففات, مهندس تبريد وتكييف, فني صيانة ثلاجات ومجمدات, مهندس صيانة منزلية" />
-      <meta property="og:title" content="تصليح المدينة | صيانة غسالات، مجففات، مكيفات وثلاجات" />
-      <meta property="og:description" content="خدمات صيانة موثوقة لجميع الأجهزة الكهربائية في المدينة المنورة. اتصل الآن للحصول على أفضل خدمة صيانة منزلية." />
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="keywords" content={seo.keywords} />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={seo.url} />
+
+      {/* Open Graph */}
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
+      <meta property="og:url" content={seo.url} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="ar_AR" />
-      <meta property="og:url" content="https://yourwebsite.com/" />
-      <meta property="og:image" content="https://yourwebsite.com/images/your-og-image.jpg" />
     </Helmet>
   );
 };

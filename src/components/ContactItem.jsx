@@ -9,7 +9,10 @@ const ContactItem = ({ icon, bgColor, title, children, link }) => {
       <div>
         <h4 className="text-lg font-bold text-gray-800">{title}</h4>
         {link ? (
-          <a href={link} className="text-gray-600 hover:text-primary">
+          <a
+            href={link}
+            className="text-gray-600 hover:text-primary hover:font-bold hover:text-lg"
+          >
             {children}
           </a>
         ) : (
