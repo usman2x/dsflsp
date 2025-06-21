@@ -31,7 +31,9 @@ jobs:
       - name: Build Gatsby site
         run: npm run build
         env:
-          GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
+          GATSBY_GA_TRACKING_ID: ${{ vars.GATSBY_GA_TRACKING_ID }}
+          GATSBY_SITEMAP_URL: ${{ vars.GATSBY_SITEMAP_URL }}
+          GATSBY_SITE_URL: ${{ vars.GATSBY_SITE_URL }}
 
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages

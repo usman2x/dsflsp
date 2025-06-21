@@ -2,7 +2,6 @@ import React from "react";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
 import contacts from "../data/contact.json";
 import heroData from "../data/hero.json";
-import PhoneNumber from "./PhoneNumber";
 
 const Hero = () => {
     const { phone, whatsapp } = contacts;
