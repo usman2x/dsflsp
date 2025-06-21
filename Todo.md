@@ -5,8 +5,8 @@
 - [x] Add Companies section below خدماتنا المتخصصة
 - [ ] Fix Github action with environment variables
 - [x] Fix Header UI , Bold مهندس صيانة غسالات , Home click fix
-- [ ] Test functionality
-- [ ] Deploy application
+- [x] Test functionality
+- [x] Deploy application
 - [ ] Fix Ads
 
 
